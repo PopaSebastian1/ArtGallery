@@ -1,0 +1,151 @@
+.header {
+  background: linear-gradient(to bottom, #c1d8f0, #e2ebf5);
+  padding: 1rem;
+  animation: gradient 15s ease infinite;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav li {
+  margin: 0 1rem;
+}
+.header nav li:first-child {
+  margin-left: 0;
+}
+.header nav li:last-child {
+  margin-right: 0;
+}
+.logo {
+  background: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: color 0.3s ease;
+}
+header nav li {
+  display: inline-block;
+}
+
+header nav li:not(:last-child) {
+  margin-right: 15px;
+}
+
+/* Ascunde li când nu are conținut */
+header nav li:empty {
+  display: none;
+}
+.header nav a::after {
+  content: '';
+  display: block;
+  width: 0; 
+  height: 2px;
+  background: black;
+  transition: width 0.3s;
+}
+.header nav a:hover::after {
+  width: 100%;
+}
+.header nav a:hover {
+  color: black;
+}
+.container {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  background: linear-gradient(to bottom, #c1d8f0, #e2ebf5);
+  }
+  
+  form {
+    /* border: 2px solid #c1d8f0; */
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 50px 60px 50px;
+    border: 4px solid black;
+    border-radius: 5px;
+    position: relative;
+    top: 0;
+    transition: all 0.3s;
+ 
+  }
+  .form input:focus + label,
+.form textarea:focus + label {
+  top: -20px;
+  font-size: 0.8rem; 
+  color: #999;
+}
+  
+  label {
+    display: block;
+    margin-bottom: 5px; 
+  }
+  
+  input,
+  textarea {
+    width:400px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: white;
+  }
+  
+  button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer; 
+    margin-top:20px;
+    position:relative;
+    overflow: hidden;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0062cc;
+  }
+  .form:hover {
+    border-color: #e73c7e;
+    /* box-shadow: 0 5px 15px rgba(0,0,0,0.1); */
+    transform: translateY(-5px);
+  }
+  
+.form button[type="submit"]::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #fff;
+  transition: width 0.3s ease;
+  z-index: -1;
+}
+
+.form button[type="submit"]:hover::after {
+  width: 120%;
+}

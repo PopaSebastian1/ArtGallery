@@ -1,0 +1,126 @@
+.header {
+  background: linear-gradient(to bottom, #c1d8f0, #e2ebf5);
+  padding: 1rem;
+  animation: gradient 15s ease infinite;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav li {
+  margin: 0 1rem;
+}
+.header nav li:first-child {
+  margin-left: 0;
+}
+.header nav li:last-child {
+  margin-right: 0;
+}
+.logo {
+  background: linear-gradient(to right, #ee7752, #e73c7e);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: color 0.3s ease;
+}
+header nav li {
+  display: inline-block;
+}
+
+header nav li:not(:last-child) {
+  margin-right: 15px;
+}
+
+/* Ascunde li când nu are conținut */
+header nav li:empty {
+  display: none;
+}
+.header nav a::after {
+  content: '';
+  display: block;
+  width: 0; 
+  height: 2px;
+  background: #e73c7e;
+  transition: width 0.3s;
+}
+.header nav a:hover::after {
+  width: 100%;
+}
+.header nav a:hover {
+  color: #e73c7e;
+}
+
+.artwork-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  background: linear-gradient(to bottom, #c1d8f0, #e2ebf5);
+  animation: gradient 15s ease infinite;
+}
+.artwork-details {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  padding: 30px;
+}
+
+.artwork-details:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+}
+
+.artwork-title {
+  background:black;
+  -webkit-background-clip: text; 
+   background-clip: text;
+
+  -webkit-text-fill-color: transparent;
+}
+
+.artwork-image {
+  max-width: 300px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto 2rem;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+}
+
+.artwork-author,
+.artwork-description {
+  margin: 0 auto 1rem;
+  max-width: 600px;
+}
+.artwork-image:hover {
+  transform: scale(1.05) rotate(5deg);
+  filter: brightness(110%);
+}
+
+@media (max-width: 600px) {
+  .artwork-details {
+    width: 90%;
+  }
+}

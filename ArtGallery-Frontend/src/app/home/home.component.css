@@ -1,0 +1,262 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.cdnfonts.com/css/calligraphy");
+@import url(https://fonts.googleapis.com/css?family=Satisfy|Pathway+Gothic+One);
+body,
+html {
+  height: 90%;
+  width: 85%;
+  align-items: center;
+}
+
+main.cd__main,
+.content {
+  min-height: 83vh; /* Minimum height to cover the viewport */
+  /* width: 100%; Full width */
+  display: flex;
+  flex-direction: column;
+}
+.welcome-text {
+  max-width: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  color: #333;
+  margin-left: 2%;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+}
+
+.link {
+  text-decoration: none;
+  color: inherit;
+  border: none;
+}
+
+.link span {
+  display: block;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 15px;
+}
+
+.cd__main h1 {
+  font-size: 40px;
+  text-align: center;
+  color: white;
+  /* add borders to writing */
+  /* border: 2px solid black; */
+  /* background: linear-gradient(to bottom, #c1d8f0, #e2ebf5); */
+
+  font-family: "Playfair Display", serif;
+  text-shadow: 2px 4px 6px rgba(0,0,0,0.4);
+  letter-spacing: 1.2px; /* Increase spacing between letters */
+  line-height: 1.2; /* Adjust line height for better readability */
+
+  background-position: center;
+  margin-top: 0%;
+  background-size: cover;
+  padding: 10px 0;
+  display: flexbox;
+  animation: slideIn 2s ease-out;
+
+}
+
+.cd__main {
+   background: linear-gradient(to bottom, #c1d8f0, #e2ebf5);
+
+  padding: 20px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+/* background: linear-gradient(to right, #F5F5DC, #D3D3D3); */
+}
+
+.title {
+  transition: all 0.5s ease-in;
+  position: absolute;
+  bottom: 0;
+  width: 300px;
+  display: block;
+  background-color: rgba(89, 89, 89, 0.4);
+}
+
+/* Style for the text overlay */
+.text {
+    position: relative;
+    color: black;
+    text-align: center;
+    font-size: 2em;
+}
+.title a {
+  font-size: 110%;
+  display: block;
+  text-transform: capitalize;
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+  height: 500px; /* Set the height of the slideshow */
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  width: 100%;
+}
+
+.mySlides img {
+  object-fit: cover; /* This will make the image cover the entire space of the width and height without stretching */
+}
+
+.mySlides.active {
+  display: block;
+}
+.slideshow-images {
+  width: 500px;
+  height: 500px;
+}
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%); /* Center vertically */
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  /* transition: background-color 0.3s ease; */
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+  transition: transform 0.3 ease;
+}
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+  transition: transform 0.3 ease;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  /* background-color: rgba(0, 0, 0, 0.8); */
+  /* transition: background-color 0.3s ease; */
+  transform: scale(1.1);
+}
+.header {
+  /* background: linear-gradient(to bottom, #c1d8f0, #e2ebf5); */
+  padding: 1rem;
+  animation: gradient 15s ease infinite;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header nav li {
+  margin: 0 1rem;
+}
+.header nav li:first-child {
+  margin-left: 0;
+}
+.header nav li:last-child {
+  margin-right: 0;
+}
+.logo {
+  /* background: linear-gradient(to right, #ee7752, #e73c7e); */
+  background-color: black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  transition: color 0.3s ease;
+}
+header nav li {
+  display: inline-block;
+}
+
+header nav li:not(:last-child) {
+  margin-right: 15px;
+}
+
+/* Ascunde li când nu are conținut */
+header nav li:empty {
+  display: none;
+}
+.header nav a::after {
+  content: '';
+  display: block;
+  width: 0; 
+  height: 2px;
+  background: #e73c7e;
+  transition: width 0.3s;
+}
+.header nav a:hover::after {
+  width: 100%;
+}
+.header nav a:hover {
+  color: #e73c7e;
+}

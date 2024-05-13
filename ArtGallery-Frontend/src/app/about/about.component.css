@@ -1,0 +1,114 @@
+/* about.component.css */
+.header {
+    padding: 1rem;
+    animation: gradient 15s ease infinite;
+  }
+
+  .header-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header nav li {
+    margin: 0 1rem;
+  }
+  .header nav li:first-child {
+    margin-left: 0;
+  }
+  .header nav li:last-child {
+    margin-right: 0;
+  }
+  .logo {
+    background-color: black;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .header nav a {
+    color: #333;
+    text-decoration: none;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s ease;
+  }
+  header nav li {
+    display: inline-block;
+  }
+  
+  header nav li:not(:last-child) {
+    margin-right: 15px;
+  }
+  
+  /* Ascunde li când nu are conținut */
+  header nav li:empty {
+    display: none;
+  }
+  .header nav a::after {
+    content: '';
+    display: block;
+    width: 0; 
+    height: 2px;
+    background: black;
+    transition: width 0.3s;
+  }
+  .header nav a:hover::after {
+    width: 100%;
+  }
+  .header nav a:hover {
+    color: black
+  }
+h1 {
+    color: #333;
+    font-size: 2em;
+    position: relative;
+    text-align: center;
+  }
+  
+  .content {
+    background: linear-gradient(to bottom, #c1d8f0, #e2ebf5);
+    min-width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .content p {
+    line-height: 1.5;
+    margin-bottom: 1em;
+  } 
+  
+  a {
+    color: #0077b5;
+  }
+  
+  a:hover {
+    color: #003350;
+  }
+.imagine
+{
+    width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 3px solid #333;
+  box-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin: 0 auto;
+  /* center the image */
+}

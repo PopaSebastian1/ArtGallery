@@ -1,0 +1,20 @@
+<!-- artwork.component.html -->
+<div class="container" *ngIf="artworks && artworks.length > 0; else noArtworks">
+  <h1 class="title">ArtVista</h1>
+  <h2 class="subtitle">{{ category }}</h2>
+  <div class="artwork-grid"> <!-- new -->
+    <div *ngFor="let artwork of artworks" class="artwork-card" [ngStyle]="{ 'background-image': 'url(' + artwork.imagePath + ')'}">
+      <div class="artwork-content">        
+        <div>
+          <h2>{{ artwork.name }}</h2>
+          <p>{{ artwork.author }}</p>
+        </div>
+      </div>
+      <button type="button" [routerLink]="['/artwork/details', artwork.id]" class="btn btn-info">Learn more about this</button>
+    </div>
+  </div> <!-- new -->
+</div>
+  
+  <ng-template #noArtworks>
+    <p>Nu există opere de artă în această categorie.</p>
+  </ng-template>

@@ -1,0 +1,24 @@
+<header class="header">
+  <div class="header-inner">
+    <div class="logo">Art Gallery</div>
+    
+    <nav>
+      <ul>
+        <li><a href="/home">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li *ngIf="userService.getUserData() && userService.getUserData()?.role  === 0">
+          <a href="/add-artwork">Add artwork</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="artwork-container">
+  <div *ngIf="artwork" class="artwork-details">
+    <h1 class="artwork-title">{{ artwork.name }}</h1>
+    <p class="artwork-author">{{ artwork.author }}</p>
+    <img [src]="artwork.imagePath" alt="{{ artwork.name }}" class="artwork-image">
+    <p class="artwork-description">{{artwork.description}}</p>
+  </div>
+</div>

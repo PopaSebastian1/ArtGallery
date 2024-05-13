@@ -1,0 +1,39 @@
+<!-- about.component.html -->
+
+<div class="content">
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo"><a routerLink="/home">Art Gallery</a></div>
+            
+            
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li *ngIf="userServices.getUserData() && userServices.getUserData()?.role  === 0">
+                        <a href="/add-artwork">Add artwork</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <h1>About Our Art Gallery</h1>
+    <a href="https://github.com/PopaSebastian1">
+        <img class="imagine" src="https://media.licdn.com/dms/image/D4D03AQFwVKqIDW4-9g/profile-displayphoto-shrink_800_800/0/1668767596580?e=1710979200&v=beta&t=FUiwCGlVxI_6rIJB7n7Rn7E_z2tpKh4bS1Nb-BCAMp4" alt="Me" />
+    </a>
+
+
+    <p>Welcome to our art gallery! We are passionate about showcasing the finest works of art from talented artists around the world.</p>
+
+    <p>Our gallery aims to provide a platform for artists to exhibit their creativity and connect with art enthusiasts. We believe that art has the power to inspire, provoke thought, and evoke emotions.</p>
+
+    <p>At our gallery, you will find a diverse collection of paintings, sculptures, photographs, and other forms of art. We curate exhibitions that explore various themes, styles, and artistic expressions.</p>
+
+    <p>Whether you are an art lover, collector, or simply curious about the world of art, we invite you to explore our gallery and immerse yourself in the beauty and creativity of the artworks on display.</p>
+
+    <p>Visit us today and experience the magic of art!</p>
+
+    <p>You can also find us on <a href="https://www.linkedin.com/in/popa-sebastian-4257b9231/">LinkedIn</a></p>
+
+       
+</div>

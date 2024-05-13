@@ -1,0 +1,51 @@
+
+<main class="cd__main">
+  <header class="header">
+    <div class="header-inner">
+      <div class="logo">Art Gallery</div>
+      
+      <nav>
+        <ul>
+          <li><a href="/home">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li *ngIf="userServices.getUserData() && userServices.getUserData()?.role  === 0">
+            <a href="/add-artwork">Add artwork</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <h1>ArtVista</h1>
+  <div class="content">
+    <div class="slideshow-container">
+      <div class="slideshow-images"
+        *ngFor="let slide of slides; let i = index"
+        [ngClass]="{ mySlides: true, fade: true, active: i === slideIndex }"
+      >
+        <a class="link" [routerLink]="slide.link" style="display: contents">
+          <img [src]="slide.img" style="width: 100%" />
+          <div class="text">{{ slide.caption }}</div> 
+        </a>
+      </div>
+
+      <!-- Next and previous buttons -->
+      <a class="prev" (click)="plusSlides(-1)">&#10094;</a>
+      <a class="next" (click)="plusSlides(1)">&#10095;</a>
+    </div>
+    <div class="welcome-text">
+        <h2>Welcome to Our Exquisite Art Gallery!</h2>
+        <p>
+          Immerse yourself in the world of unique, handcrafted art pieces created with passion. Our gallery showcases a diverse collection of works from gifted artists around the globe. From intricate sculptures to captivating paintings, breathtaking photography to innovative mixed media art, you'll discover something that resonates with your aesthetic.
+        </p>
+        <p>
+          Each piece tells a story, reflecting the heart and soul of its creator. As you explore our gallery, you'll journey through different cultures, perspectives, and artistic styles. You'll find art that challenges conventions, art that soothes the soul, and art that sparks curiosity.
+        </p>
+        <p>
+          Whether you're an avid art collector or a casual visitor, we believe you'll find something special here. Our friendly and knowledgeable staff are always on hand to assist you, whether you're looking for information about a particular artist, advice on choosing a piece, or simply want to learn more about the art world.
+        </p>
+        <p>
+          Enjoy your journey through art! We're delighted to share this world with you.
+        </p>
+    </div>
+  </div>
+</main>
